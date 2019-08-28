@@ -1,0 +1,18 @@
+client -> server : HTTP POST https://fullstack-exampleapp.herokuapp.com/new-note-spa
+
+note over server  : 
+The browser sends only one request to the server.
+The POST request to the address new-note-spa contains
+the new note as JSON-data containing both 
+the content of the note (content) and the timestamp (date):
+end note
+
+note over server  : 
+The contents are manipulated with javaasript in the browser.
+Even though the logic for rendering the notes is run on the browser,
+the page still uses the traditional way of adding new notes. 
+The data is sent to the server with form submit,
+and the server instructs the browser to reload the Notes page with a redirect.
+end note
+
+server --> client: url redirect with new content

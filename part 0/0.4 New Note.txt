@@ -1,0 +1,22 @@
+client -> server : HTTP POST https://fullstack-exampleapp.herokuapp.com/new-note
+server --> client: url redirect with new data
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/note
+server --> client: HTML Code
+client-> server  : HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server --> client: main.css
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server --> client: main.js
+
+note over client : 
+the browser starts to execute the js code which
+requests JSON data from the server
+end note
+
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server --> client : [{ content: "Multiple Page App", date: "2019-08-28" }, ...]
+
+
+note over  client : 
+the browser executes the event handler which renders 
+the notes on the screen end 
+end note

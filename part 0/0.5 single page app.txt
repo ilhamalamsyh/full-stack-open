@@ -1,0 +1,20 @@
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server --> client: HTML Code
+client-> server  : HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server --> client: main.css
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server --> client: spa.js
+
+note over client : 
+The browser starts to execute the js code which
+requests JSON data from the server
+end note
+
+client -> server : HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server --> client : [{ content: "Multiple Page App", date: "2019-08-28" }, ...]
+
+
+note over  client : 
+The browser executes the event handler which renders 
+the notes on the screen end 
+end note
